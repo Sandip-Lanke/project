@@ -6,6 +6,7 @@ pipeline {
 	  stage ('install-appache'){
 	  steps {
 	     sh "yum install httpd -y"
+		  sh "yum install tree -y"
 	  }
 	  
 	  }
@@ -19,6 +20,7 @@ pipeline {
 	  steps {
 	     sh "cp -r index.html /var/www/html/"
 		 sh "chmod -R 777 /var/www/html/index.html"
+		  
 	  }
 	  
 	  }
